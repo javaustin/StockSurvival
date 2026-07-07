@@ -1,0 +1,40 @@
+spawn-prot:
+  target-protected: "&cThis player is under protection!"
+  attacker-protected: "&cYou cannot attack players when you are under protection!"
+
+combat-logger:
+  in-combat: "&cYou are in combat for {remaining-time} more seconds."
+  out-of-combat: "&aYou are out of combat! You may log off safely!"
+  combat-logged: "&c{player-display-name} logged out in combat."
+
+death-location: "&cYou died at {block-x}, {block-y}, {block-z}"
+
+end-disabled: "&eThe end will not be enabled until a scheduled time yet to be determined. Check the discord for any updates!"
+
+on-join-first: "&e{player-display-name} joined the server for the first time"
+on-join: "&e{player-display-name} joined the server"
+on-leave: "&e{player-display-name} left the server"
+
+commands:
+  forfeit: "&4You permanently forfeit your newbie protection!"
+  forfeit-confirm: |
+    &eAre you sure you want to permanently forfeit your newbie PVP protection? You cannot undo this action!
+    &4[[&4[&4Yes](RUN_COMMAND:/protection forfeit -confirm)&4]] &a[[&a[&aNo](RUN_COMMAND:/show {player} &eIgnoring)&a]]
+  forfeit-error-not-protected: "&cYou do not have newbie protection!"
+  protection-view: "&fYou have &b{time-remaining}&f of newbie protection remaining."
+
+errors:
+  command:
+    no-access: "[&cYou do not have access to this command!](HOVER:&cYou do not have the required permission: {permission})" # Format: permission
+    player-only: "&cThis command must be used by a player!" # no format
+
+  player:
+    is-self: "&cYou cannot use this command on yourself!" # no format
+    not-found: "[&cPlayer not found!](HOVER:&7Could not find player with the username of &f{username}&7!)" # Format: username
+    outranks-sender: "&cYou cannot use this command on a player which outranks you!" # Format: MessageFormatters.playerSenderFormatter(...);
+    is-offline: "&cThis player is offline!" # Format MF.playerFormatter(target);
+
+
+  args:
+    missing:
+      general: "&cThis command is missing the required argument((s)): &f{missing-args}" # format w/ {missing-args}, {syntax}

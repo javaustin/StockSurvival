@@ -1,0 +1,27 @@
+name: StockSurvival
+version: '${version}'
+
+main: com.carrotguy69.stocksurvival.StockSurvival
+api-version: '26.1.2'
+load: POSTWORLD
+
+depend:
+  - cxyz
+
+commands:
+
+  protection:
+    description: Manage your newbie protection
+    usage: /protection <forfeit | view> [...]
+    permission: "stocksurvival.protection"
+    aliases: [prot, newbieprotection, newbieprot, newbie]
+
+permissions:
+  stocksurvival.protection:
+    default: true
+  stocksurvival.protection.forfeit:
+    default: true
+  stocksurvival.protection.view:
+    default: true
+  stocksurvival.protection.view.others:
+    default: op

@@ -1,0 +1,9 @@
+com/carrotguy69/stocksurvival/cmd/protection/View.class
+com/carrotguy69/stocksurvival/event/ChatHandler.class
+com/carrotguy69/stocksurvival/cmd/protection/Forfeit.class
+com/carrotguy69/stocksurvival/cmd/protection/_ProtectionSupercommand.class
+com/carrotguy69/stocksurvival/messages/MessageGrabber.class
+com/carrotguy69/stocksurvival/StockSurvival.class
+com/carrotguy69/stocksurvival/tabCompleters/Protection.class
+com/carrotguy69/stocksurvival/StockSurvival$1.class
+com/carrotguy69/stocksurvival/messages/SurvivalMessageKey.class

@@ -1,0 +1,8 @@
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/StockSurvival.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/protection/Forfeit.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/protection/View.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/protection/_ProtectionSupercommand.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/event/ChatHandler.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/messages/MessageGrabber.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/messages/SurvivalMessageKey.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/tabCompleters/Protection.java

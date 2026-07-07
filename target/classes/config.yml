@@ -1,0 +1,20 @@
+xray:
+  blocks:
+    - diamond_ore
+    - deepslate_diamond_ore
+    - ancient_debris
+
+  notification:
+    channel: "staff"
+    message: "{player} mined {block} at {block-x}, {block-y}, {block-z} in {world}"
+
+# Amount of time (in seconds) before a player can safely log off after getting combat tagged
+combat-logger-seconds: 10
+
+# Amount of playtime (in seconds) such a player will be protected from PVP damage upon their first ever join
+newbie-protection: 14400
+
+# Amount of time (in seconds) that a player will be protected from all damage upon their join
+spawn-protection: 10
+
+disable-end: true
