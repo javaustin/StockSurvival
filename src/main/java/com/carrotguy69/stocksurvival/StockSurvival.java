@@ -110,6 +110,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
     /*
 
     todo:
+        - trigger lifesteal events on combat log
         - Anvil too expensive bypass
         - action bar notice for newbie protection
         - tpa system
@@ -451,10 +452,9 @@ public final class StockSurvival extends JavaPlugin implements Listener {
          final long[] secs = new long[]{seconds};
 
         new BukkitRunnable() {public void run() {
-            // To prevent multiple tasks from spinning on the same player, we can compare the original timestamp to what is in the map now.
+            // To prevent multiple tasks from spinning on the same player, we can compare the original timestamp and make sure it is the most recent.
 
-            if (combatLogMap.get(p.getUniqueId()) == null || originalExpireTimestamp != combatLogMap.get(p.getUniqueId()) || p.isDead()) {
-                combatLogMap.remove(p.getUniqueId());
+            if (combatLogMap.get(p.getUniqueId()) == null || originalExpireTimestamp < combatLogMap.get(p.getUniqueId()) || p.isDead()) {
                 this.cancel();
                 return;
             }
