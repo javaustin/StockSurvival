@@ -44,19 +44,16 @@ public class Forfeit implements CommandExecutor {
             return true;
         }
 
-        Map<String, Object> commonMap = MapFormatters.playerFormatter(NetworkPlayer.resolvePlayer(p.getUniqueId()));
+        NetworkPlayer np = NetworkPlayer.resolvePlayer(p.getUniqueId());
+
+        Map<String, Object> commonMap = MapFormatters.playerFormatter(np);
 
         boolean confirmed = ObjectUtils.containsIgnoreCase(Arrays.asList(args), "-confirm");
 
         args = ObjectUtils.removeItem(args, "-confirm");
 
-        GameStat stat = GameStat.getStat(p.getUniqueId(), "survival-forfeit-protetion");
 
-        if (stat == null) {
-            stat = new GameStat(p.getUniqueId(), "survival-forfeit-protection", "false");
-        }
-
-        if (stat.getValue().equalsIgnoreCase("true") || !StockSurvival.isProtected(p)) {
+        if (!StockSurvival.isProtected(p)) {
             MessageUtils.sendParsedMessage(p, MessageGrabber.grab(UNPROTECTED), commonMap);
             return true;
         }
@@ -66,11 +63,7 @@ public class Forfeit implements CommandExecutor {
             return true;
         }
 
-        stat.setValue("true");
-
-
-        CXYZ.statUUIDMap.put(p.getUniqueId(), stat);
-        stat.sync();
+        GameStat.setStat(p.getUniqueId(), StockSurvival.newbieProtForfeitKey, "true").sync();
 
         MessageUtils.sendParsedMessage(p, MessageGrabber.grab(FORFEIT), commonMap);
 

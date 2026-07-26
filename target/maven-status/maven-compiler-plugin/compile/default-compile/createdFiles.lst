@@ -1,9 +1,15 @@
 com/carrotguy69/stocksurvival/cmd/protection/View.class
+com/carrotguy69/stocksurvival/cmd/lifesteal/GetMaxHP.class
 com/carrotguy69/stocksurvival/event/ChatHandler.class
+com/carrotguy69/stocksurvival/event/VanishToggleHandler.class
+com/carrotguy69/stocksurvival/cmd/lifesteal/_LifestealSupercommand.class
+com/carrotguy69/stocksurvival/StockSurvival$2.class
 com/carrotguy69/stocksurvival/cmd/protection/Forfeit.class
-com/carrotguy69/stocksurvival/cmd/protection/_ProtectionSupercommand.class
-com/carrotguy69/stocksurvival/messages/MessageGrabber.class
 com/carrotguy69/stocksurvival/StockSurvival.class
 com/carrotguy69/stocksurvival/tabCompleters/Protection.class
 com/carrotguy69/stocksurvival/StockSurvival$1.class
 com/carrotguy69/stocksurvival/messages/SurvivalMessageKey.class
+com/carrotguy69/stocksurvival/cmd/lifesteal/SetMaxHP.class
+com/carrotguy69/stocksurvival/tabCompleters/Lifesteal.class
+com/carrotguy69/stocksurvival/cmd/protection/_ProtectionSupercommand.class
+com/carrotguy69/stocksurvival/messages/MessageGrabber.class

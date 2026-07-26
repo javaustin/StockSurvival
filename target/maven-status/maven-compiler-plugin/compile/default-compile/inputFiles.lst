@@ -1,8 +1,13 @@
 /home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/StockSurvival.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/lifesteal/GetMaxHP.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/lifesteal/SetMaxHP.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/lifesteal/_LifestealSupercommand.java
 /home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/protection/Forfeit.java
 /home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/protection/View.java
 /home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/cmd/protection/_ProtectionSupercommand.java
 /home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/event/ChatHandler.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/event/VanishToggleHandler.java
 /home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/messages/MessageGrabber.java
 /home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/messages/SurvivalMessageKey.java
+/home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/tabCompleters/Lifesteal.java
 /home/austin/Documents/dev/StockSurvival/src/main/java/com/carrotguy69/stocksurvival/tabCompleters/Protection.java

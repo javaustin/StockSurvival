@@ -16,6 +16,12 @@ commands:
     permission: "stocksurvival.protection"
     aliases: [prot, newbieprotection, newbieprot, newbie]
 
+  lifesteal:
+    description: Manage your lifesteal max HP
+    usage: /lifesteal <getMaxHP | setMaxHP> [player] [...]
+    permission: "stocksurvival.lifesteal"
+    aliases: []
+
 permissions:
   stocksurvival.protection:
     default: true
@@ -24,4 +30,11 @@ permissions:
   stocksurvival.protection.view:
     default: true
   stocksurvival.protection.view.others:
+    default: op
+
+  stocksurvival.lifesteal.getmaxhp:
+    default: op
+  stocksurvival.lifesteal.getmaxhp.others:
+    default: op
+  stocksurvival.lifesteal.setmaxhp:
     default: op

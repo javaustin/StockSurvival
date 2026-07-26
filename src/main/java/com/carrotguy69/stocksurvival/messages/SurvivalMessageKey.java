@@ -11,6 +11,9 @@ public enum SurvivalMessageKey {
     FORFEIT_CONFIRM("commands.forfeit-confirm"),
     UNPROTECTED("commands.forfeit-error-not-protected"),
 
+    LIFESTEAL_GET_MAX_HP("commands.lifesteal.get-max-hp"),
+    LIFESTEAL_SET_MAX_HP("commands.lifesteal.set-max-hp"),
+
     PROTECTION_VIEW("commands.protection-view"),
 
     END_DISABLED("end-disabled"),

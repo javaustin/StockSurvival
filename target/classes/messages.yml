@@ -23,6 +23,11 @@ commands:
   forfeit-error-not-protected: "&cYou do not have newbie protection!"
   protection-view: "&fYou have &b{time-remaining}&f of newbie protection remaining."
 
+
+  lifesteal:
+    get-max-hp: "&a{player}'s max health is {hp}HP."
+    set-max-hp: "&aSet {player}'s max health to {hp}HP."
+
 errors:
   command:
     no-access: "[&cYou do not have access to this command!](HOVER:&cYou do not have the required permission: {permission})" # Format: permission

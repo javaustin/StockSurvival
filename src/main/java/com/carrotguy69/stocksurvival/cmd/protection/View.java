@@ -58,13 +58,13 @@ public class View implements CommandExecutor {
             if (np != null)
                 p = np.getPlayer();
 
-            if (p == null && np != null) {
-                MessageUtils.sendParsedMessage(sender, MessageGrabber.grab(PLAYER_IS_OFFLINE), MapFormatters.playerFormatter(np));
+            if (np == null) {
+                MessageUtils.sendParsedMessage(sender, MessageGrabber.grab(PLAYER_NOT_FOUND), Map.of("username", args[0]));
                 return true;
             }
 
-            else if (np == null) {
-                MessageUtils.sendParsedMessage(sender, MessageGrabber.grab(PLAYER_NOT_FOUND), Map.of("username", args[0]));
+            if (p == null) {
+                MessageUtils.sendParsedMessage(sender, MessageGrabber.grab(PLAYER_IS_OFFLINE), MapFormatters.playerFormatter(np));
                 return true;
             }
         }
@@ -72,10 +72,10 @@ public class View implements CommandExecutor {
         Map<String, Object> commonMap = MapFormatters.playerFormatter(np);
         commonMap.put("time-remaining", TimeUtils.countdownShort(StockSurvival.getProtectionTimeLeft(p)));
 
-        GameStat stat = GameStat.getStat(p.getUniqueId(), "survival-forfeit-protetion");
+        GameStat stat = GameStat.getStat(p.getUniqueId(), StockSurvival.newbieProtForfeitKey);
 
         if (stat == null) {
-            stat = new GameStat(p.getUniqueId(), "survival-forfeit-protection", "false");
+            stat = new GameStat(p.getUniqueId(), StockSurvival.newbieProtForfeitKey, "false");
         }
 
 
