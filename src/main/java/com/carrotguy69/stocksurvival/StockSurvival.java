@@ -103,14 +103,10 @@ public final class StockSurvival extends JavaPlugin implements Listener {
     public static String publicWebhookUrl;
 
     public static String lifestealMaxHPKey = "survival-lifesteal-hp";
-
     public static String newbieProtForfeitKey = "survival-forfeit-protection";
 
-
     /*
-
     todo:
-        - trigger lifesteal events on combat log
         - Anvil too expensive bypass
         - action bar notice for newbie protection
         - tpa system
@@ -172,7 +168,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
         embed.setDescription("**Server started!**");
         embed.setColor(0x5ac155);
 
-        new DiscordWebhook().setURL(publicWebhookUrl).addEmbed(embed).send();
+        new DiscordWebhook(publicWebhookUrl, "", List.of(embed));
     }
 
     @Override
@@ -183,7 +179,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
         embed.setDescription("**Server stopped!**");
         embed.setColor(0xc16155);
 
-        new DiscordWebhook().setURL(publicWebhookUrl).addEmbed(embed).send();
+        new DiscordWebhook(publicWebhookUrl, "", List.of(embed));
         // Plugin shutdown logic
     }
 
@@ -330,7 +326,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
         embed.setDescription("** " + ChatColor.stripColor(f(formatPlaceholders(MessageGrabber.grab(key), commonMap))) + "**");
         embed.setColor(0x79ff70);
 
-        new DiscordWebhook().setURL(publicWebhookUrl).addEmbed(embed).send();
+        new DiscordWebhook(publicWebhookUrl, "", List.of(embed));
     }
 
     @EventHandler
@@ -361,7 +357,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
         embed.setDescription("**" + ChatColor.stripColor(f(formatPlaceholders(MessageGrabber.grab(ON_LEAVE), commonMap))) + "**");
         embed.setColor(0xff7070);
 
-        new DiscordWebhook().setURL(publicWebhookUrl).addEmbed(embed).send();
+        new DiscordWebhook(publicWebhookUrl, "", List.of(embed));
 
     }
 
@@ -378,7 +374,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
         embed.setDescription(ChatColor.stripColor(f(Objects.requireNonNull(e.getDeathMessage()).replace(p.getName(), "**" + np.getDisplayName() + " **"))));
         embed.setColor(0xd60202);
 
-        new DiscordWebhook().setURL(publicWebhookUrl).addEmbed(embed).send();
+        new DiscordWebhook(publicWebhookUrl, "", List.of(embed));
 
         // Lifesteal handle death
 
@@ -418,7 +414,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
         embed.setDescription(NetworkPlayer.resolvePlayer(e.getPlayer().getUniqueId()).getDisplayName() + " has made the advancement **" + advancementDisplayName + "**");
         embed.setColor(0x8814ba);
 
-        new DiscordWebhook().setURL(publicWebhookUrl).addEmbed(embed).send();
+        new DiscordWebhook(publicWebhookUrl, "", List.of(embed));
     }
 
 
@@ -563,7 +559,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
                 val = Math.toIntExact(Math.round(maxHealthAttr.getValue()));
             }
 
-            npStat = new GameStat(p.getUniqueId(), lifestealMaxHPKey, String.valueOf(val));
+            return val;
         }
 
         return Integer.parseInt(npStat.getValue());

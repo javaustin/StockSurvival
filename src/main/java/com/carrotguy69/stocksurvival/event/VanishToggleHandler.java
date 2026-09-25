@@ -9,6 +9,7 @@ import com.carrotguy69.stocksurvival.StockSurvival;
 import com.carrotguy69.stocksurvival.messages.MessageGrabber;
 import org.bukkit.ChatColor;
 
+import java.util.List;
 import java.util.Map;
 
 import static com.carrotguy69.cxyz.CXYZ.f;
@@ -35,7 +36,7 @@ public class VanishToggleHandler implements EventHandler<VanishToggleEvent> {
             embed.setDescription("**" + ChatColor.stripColor(f(formatPlaceholders(MessageGrabber.grab(ON_LEAVE), commonMap))) + "**");
             embed.setColor(0xff7070);
 
-            new DiscordWebhook().setURL(publicWebhookUrl).addEmbed(embed).send();
+            new DiscordWebhook(publicWebhookUrl, "", List.of(embed)).send();
         }
 
         else {

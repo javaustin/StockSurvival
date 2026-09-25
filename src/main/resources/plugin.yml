@@ -2,7 +2,7 @@ name: StockSurvival
 version: '${version}'
 
 main: com.carrotguy69.stocksurvival.StockSurvival
-api-version: '26.1.2'
+api-version: '26.3'
 load: POSTWORLD
 
 depend:

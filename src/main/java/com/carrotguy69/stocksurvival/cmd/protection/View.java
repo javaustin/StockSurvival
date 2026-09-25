@@ -75,7 +75,7 @@ public class View implements CommandExecutor {
         GameStat stat = GameStat.getStat(p.getUniqueId(), StockSurvival.newbieProtForfeitKey);
 
         if (stat == null) {
-            stat = new GameStat(p.getUniqueId(), StockSurvival.newbieProtForfeitKey, "false");
+            stat = GameStat.setStat(p.getUniqueId(), StockSurvival.newbieProtForfeitKey, "false");
         }
 
 
