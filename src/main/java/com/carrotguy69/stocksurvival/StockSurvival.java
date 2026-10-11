@@ -210,7 +210,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
         if (notifyChannel == null)
             return;
 
-        notifyChannel.sendChannelMessage(xrayChatFormat, commonMap);
+        notifyChannel.sendChannelMessage(xrayChatFormat, commonMap, true);
     }
 
     @EventHandler
@@ -318,7 +318,7 @@ public final class StockSurvival extends JavaPlugin implements Listener {
 
         setPlayerMaxHP(p, getPlayerMaxHP(p));
 
-        publicChat.sendChannelMessage(MessageGrabber.grab(key), commonMap);
+        publicChat.sendChannelMessage(MessageGrabber.grab(key), commonMap, false);
 
         // discord message
         DiscordEmbed embed = new DiscordEmbed();
@@ -344,11 +344,11 @@ public final class StockSurvival extends JavaPlugin implements Listener {
                 return;
             }
 
-            publicChannel.sendChannelMessage(MessageGrabber.grab(COMBAT_LOGGED), commonMap);
+            publicChannel.sendChannelMessage(MessageGrabber.grab(COMBAT_LOGGED), commonMap, false);
         }
 
 
-        publicChat.sendChannelMessage(MessageGrabber.grab(ON_LEAVE), commonMap);
+        publicChat.sendChannelMessage(MessageGrabber.grab(ON_LEAVE), commonMap, false);
 
 
         // discord message

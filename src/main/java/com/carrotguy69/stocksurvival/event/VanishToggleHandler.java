@@ -27,7 +27,7 @@ public class VanishToggleHandler implements EventHandler<VanishToggleEvent> {
 
             Map<String, Object> commonMap = MapFormatters.playerFormatter(e.getPlayer());
 
-            publicChat.sendChannelMessage(MessageGrabber.grab(ON_LEAVE), commonMap);
+            publicChat.sendChannelMessage(MessageGrabber.grab(ON_LEAVE), commonMap, false);
 
 
             // discord message
